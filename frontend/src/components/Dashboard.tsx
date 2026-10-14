@@ -12,17 +12,17 @@ const Dashboard: React.FC = () => {
   const [selectedProperty, setSelectedProperty] = useState('');
 
   useEffect(() => {
-    const fetchProperties = async () => {
-      try {
-        const data = await SecureAPI.getDashboardProperties();
-        setProperties(data);
-        if (data.length > 0) setSelectedProperty(data[0].id);
-      } catch (err) {
-        console.error('Failed to load properties', err);
-      }
-    };
-    fetchProperties();
-  }, []);
+  const fetchProperties = async () => {
+    try {
+      const data = await SecureAPI.getDashboardProperties();
+setProperties(data);
+if (data.length > 0) setSelectedProperty(data[0].id);
+    } catch (err) {
+      console.error('Failed to load properties', err);
+    }
+  };
+  fetchProperties();
+}, []);
 
   return (
     <div className="p-4 lg:p-6 min-h-full">
