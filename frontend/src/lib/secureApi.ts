@@ -2424,7 +2424,12 @@ export class SecureAPIClient {
       method: 'DELETE'
     });
   }
+  
+  async getDashboardProperties(): Promise<Array<{ id: string; name: string }>> {
+    return this.request<Array<{ id: string; name: string }>>('/api/v1/dashboard/properties');
+  }
 }
+
 
 // Export singleton instance
 export const SecureAPI = SecureAPIClient.getInstance();

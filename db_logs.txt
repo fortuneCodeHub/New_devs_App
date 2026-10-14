@@ -1,0 +1,30 @@
+﻿
+backend-1  | 
+INFO:app.core.supabase_connection_pool:Initializing 
+Supabase connection pool with 150 connections
+backend-1  | ERROR:app.core.supabase_connection_pool:Γ¥î 
+Failed to initialize Supabase connection pool: 
+supabase_url is required
+backend-1  | ERROR:app.main:Γ¥î Supabase connection pool 
+initialization failed: supabase_url is required
+backend-1  | INFO:app.core.redis_client:Γ£à Redis 
+connection established with connection pooling
+backend-1  | INFO:app.api.v1.company_settings:Fetching 
+company settings from database for user 
+sunset@propertyflow.com (tenant: tenant-a)
+backend-1  | Database error for prop-001 (tenant: 
+tenant-a): The SQLAlchemy asyncio module requires that 
+the Python 'greenlet' library is installed.  In order to 
+ensure this dependency is available, use the 
+'sqlalchemy[asyncio]' install target:  'pip install 
+sqlalchemy[asyncio]'
+backend-1  | ERROR:app.core.database_pool:Γ¥î Database 
+pool initialization failed: 'Settings' object has no 
+attribute 'supabase_db_user'
+backend-1  | Database error for prop-001 (tenant: 
+tenant-b): Database pool not available
+backend-1  | INFO:app.api.v1.company_settings:Fetching 
+company settings from database for user 
+ocean@propertyflow.com (tenant: tenant-b)
+
+
